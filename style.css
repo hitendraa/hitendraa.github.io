@@ -207,6 +207,15 @@ body {
     display: flex;
     flex-direction: column;
 }
+.logo a{
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
 
 .glitch {
     font-size: 2rem;
@@ -846,6 +855,7 @@ canvas {
     justify-content: space-around;
     align-items: center;
     z-index: 10;
+
 }
 
 .card {
