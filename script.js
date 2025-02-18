@@ -1,4 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Remove any cursor-related elements and event listeners
+    const elements = document.querySelectorAll('.cyber-cursor, .trail-dot');
+    elements.forEach(el => el.remove());
+    
     // Initialize elements
     const hireButton = document.querySelector('.hire-text');
     const modal = document.getElementById('hireModal');
@@ -297,6 +301,43 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     themeSwitch.addEventListener('click', toggleTheme);
+
+    // Mobile menu functionality
+    const hamburgerMenu = document.getElementById('hamburgerMenu');
+    const mobileNav = document.querySelector('.mobile-nav');
+    const mobileClose = document.getElementById('mobileClose');
+    const overlay = document.getElementById('overlay');
+    const mobileThemeSwitch = document.getElementById('mobilethemeSwitch');
+
+    function openMobileMenu() {
+        mobileNav.style.visibility = 'visible';
+        mobileNav.classList.add('active');
+        overlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeMobileMenu() {
+        mobileNav.classList.remove('active');
+        overlay.classList.remove('active');
+        document.body.style.overflow = '';
+        setTimeout(() => {
+            mobileNav.style.visibility = 'hidden';
+        }, 300);
+    }
+
+    hamburgerMenu.addEventListener('click', openMobileMenu);
+    mobileClose.addEventListener('click', closeMobileMenu);
+    overlay.addEventListener('click', closeMobileMenu);
+    
+    // Add theme switch functionality to mobile button
+    mobileThemeSwitch.addEventListener('click', toggleTheme);
+
+    // Close mobile menu on window resize
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 768) {
+            closeMobileMenu();
+        }
+    });
 });
 
 

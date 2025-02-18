@@ -8,7 +8,7 @@
     <meta http-equiv="Content-Security-Policy" content="
       default-src 'self' cdnjs.cloudflare.com unpkg.com;
       style-src 'self' 'unsafe-inline' fonts.googleapis.com cdnjs.cloudflare.com;
-      font-src 'self' fonts.gstatic.com;
+      font-src 'self' fonts.gstatic.com cdnjs.cloudflare.com *.cloudflare.com;
       img-src 'self' images.pexels.com *.hitendraa.me;
       script-src 'self' 'unsafe-inline' cdnjs.cloudflare.com unpkg.com;
       connect-src 'self';
@@ -113,7 +113,8 @@
         </div>
       </div>
 
-      <div class="nav-links">
+      <!-- Desktop Navigation -->
+      <div class="nav-links desktop-only">
         <div class="nav-decorator">&#60;&#47;&#62;</div>
         <a href="#" class="cyber-link"
           >HOME<span class="link-decorator">_01</span></a
@@ -130,6 +131,58 @@
         <div class="nav-decorator">&#60;&#47;&#62;</div>
       </div>
 
+      <div class="social-hire desktop-only">
+        <div class="social-links">
+          <a href="https://github.com/hitendraa" class="social-icon"
+            ><i class="fab fa-github"></i
+          ></a>
+          <a href="https://linkedin.com/in/hitendraa" class="social-icon"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+          <button class="theme-switch" id="themeSwitch">
+            <span class="switch-text" data-text="SWITCH.SYS">SWITCH.SYS</span>
+          </button>
+        </div>
+        <div class="hire-section">
+          <span class="hire-text">AVAILABLE FOR HIRE</span>
+          <div class="qr-code">
+            <span class="scan-text">SCAN</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Controls -->
+      <div class="mobile-controls">
+        <button class="theme-switch" id="mobilethemeSwitch">
+          <span class="switch-text" data-text="SWITCH.SYS">SWITCH.SYS</span>
+        </button>
+        <button class="hamburger-menu" id="hamburgerMenu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav">
+      <button class="mobile-close" id="mobileClose">
+        <i class="fas fa-times"></i>
+      </button>
+      <div class="nav-links">
+        <div class="nav-decorator">&#60;&#47;&#62;</div>
+        <a href="#" class="cyber-link"
+          >HOME<span class="link-decorator">_01</span></a
+        >
+        <a href="#work" class="cyber-link"
+          >WORK<span class="link-decorator">_02</span></a
+        >
+        <a href="#" class="cyber-link"
+          >SKILLS<span class="link-decorator">_03</span></a
+        >
+        <a href="#" class="cyber-link"
+          >CONTACT<span class="link-decorator">_04</span></a
+        >
+        <div class="nav-decorator">&#60;&#47;&#62;</div>
+      </div>
       <div class="social-hire">
         <div class="social-links">
           <a href="https://github.com/hitendraa" class="social-icon"
@@ -149,7 +202,9 @@
           </div>
         </div>
       </div>
-    </nav>
+    </div>
+
+    <div class="overlay" id="overlay"></div>
 
     <section class="hero">
       <div class="hero-decorations">
