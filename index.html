@@ -101,9 +101,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <style>
+      .letter {
+        color: #00CED1; /* Updated from #F40C3F to #00CED1 */
+      }
+    </style>
   </head>
   <body>
-    <canvas id="bgCanvas"></canvas>
     <nav class="cyber-nav">
       <div class="logo">
         <a href="/"><span class="glitch">HITENDRA</span></a>
@@ -206,7 +210,7 @@
 
     <div class="overlay" id="overlay"></div>
 
-    <section class="hero">
+    <section class="hero" id="hero">
       <div class="hero-decorations">
         <div class="hero-line hero-line-left"></div>
         <div class="hero-line hero-line-right"></div>
@@ -265,107 +269,182 @@
         </div>
       </div>
     </section>
-    <section class="work" id="work">
-      <div class="text-container"></div>
-      <div class="cards">
-        <div class="card">
-          <div class="card-img">
-            <img
-              src="https://images.pexels.com/photos/3207527/pexels-photo-3207527.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-              alt="Project 1"
-            />
-          </div>
-          <div class="card-copy">
-            <p>Card Title</p>
-            <p>Card ID</p>
-          </div>
+    <div class="work-container">
+        <div class="work-window">
+            <div class="window-header"></div>
+            <div class="window-controls">
+                <div class="window-control"></div>
+                <div class="window-control"></div>
+                <div class="window-control"></div>
+            </div>
+            <div class="work-preview">
+                <section class="work" id="work">
+                    <div class="text-container"></div>
+                    <div class="cards">
+                        <div class="card" data-project="chat-pdf">
+                            <div class="card-img">
+                                <div class="browser-frame">
+                                    <div class="browser-header">
+                                        <div class="browser-controls">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </div>
+                                        <div class="browser-address">
+                                            <div class="browser-url">chat-with-pdf.project</div>
+                                        </div>
+                                    </div>
+                                    <div class="browser-content">
+                                        <img src="images/chat-with-pdf.png" alt="Chat with PDF Application" />
+                                    </div>
+                                </div>
+                                <div class="card-overlay">
+                                    <div class="card-info">
+                                        <span class="card-tag">AI/ML</span>
+                                    </div>
+                                    <div class="card-actions">
+                                        <a href="https://chat-with-pdf-challenge-mocha.vercel.app/" target="_blank" class="card-button">VISIT SITE</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-copy">
+                                <p>Chat with PDF</p>
+                                <p>PRJ_01</p>
+                            </div>
+                        </div>
+
+                        <div class="card" data-project="kynok">
+                            <div class="card-img">
+                                <div class="browser-frame">
+                                    <div class="browser-header">
+                                        <div class="browser-controls">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </div>
+                                        <div class="browser-address">
+                                            <div class="browser-url">kynok.com</div>
+                                        </div>
+                                    </div>
+                                    <div class="browser-content">
+                                        <img src="images/kynok.png" alt="Kynok Startup Website" />
+                                    </div>
+                                </div>
+                                <div class="card-overlay">
+                                    <div class="card-info">
+                                        <span class="card-tag">STARTUP</span>
+                                    </div>
+                                    <div class="card-actions">
+                                        <a href="https://kynok.com" class="card-button" target="_blank">VISIT SITE</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-copy">
+                                <p>Kynok Startup</p>
+                                <p>PRJ_02</p>
+                            </div>
+                        </div>
+
+                        <div class="card" data-project="soothup">
+                            <div class="card-img">
+                                <div class="browser-frame">
+                                    <div class="browser-header">
+                                        <div class="browser-controls">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </div>
+                                        <div class="browser-address">
+                                            <div class="browser-url">soothup.project</div>
+                                        </div>
+                                    </div>
+                                    <div class="browser-content">
+                                        <img src="images/soothup.png" alt="SoothUp Application" />
+                                    </div>
+                                </div>
+                                <div class="card-overlay">
+                                    <div class="card-info">
+                                        <span class="card-tag">WELLNESS</span>
+                                    </div>
+                                    <div class="card-actions">
+                                        <a href="https://www.figma.com/design/nCcWKP2wnRR4iNu1TRcqNV/Wellness-%26-Fitness-App-UI?node-id=0-1&p=f&t=kudYoKLhbwUKAyRT-0" class="card-button" target="_blank">VISIT SITE</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-copy">
+                                <p>SoothUp</p>
+                                <p>PRJ_03</p>
+                            </div>
+                        </div>
+
+                        <div class="card" data-project="apple">
+                            <div class="card-img">
+                                <div class="browser-frame">
+                                    <div class="browser-header">
+                                        <div class="browser-controls">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </div>
+                                        <div class="browser-address">
+                                            <div class="browser-url">apple-clone.project</div>
+                                        </div>
+                                    </div>
+                                    <div class="browser-content">
+                                        <img src="images/apple-clone.png" alt="Apple Clone 3D Website" />
+                                    </div>
+                                </div>
+                                <div class="card-overlay">
+                                    <div class="card-info">
+                                        <span class="card-tag">3D/WEB</span>
+                                    </div>
+                                    <div class="card-actions">
+                                        <a href="https://apple-website-liard.vercel.app/" target="_blank" class="card-button">VISIT SITE</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-copy">
+                                <p>Apple Clone 3D</p>
+                                <p>PRJ_04</p>
+                            </div>
+                        </div>
+
+                        <div class="card" data-project="portfolio">
+                            <div class="card-img">
+                                <div class="browser-frame">
+                                    <div class="browser-header">
+                                        <div class="browser-controls">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </div>
+                                        <div class="browser-address">
+                                            <div class="browser-url">hitendraa.me</div>
+                                        </div>
+                                    </div>
+                                    <div class="browser-content">
+                                        <img src="images/portfolio.png" alt="Portfolio Site" />
+                                    </div>
+                                </div>
+                                <div class="card-overlay">
+                                    <div class="card-info">
+                                        <span class="card-tag">PORTFOLIO</span>
+                                    </div>
+                                    <div class="card-actions">
+                                        <a href="/" class="card-button">CURRENT SITE</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-copy">
+                                <p>Portfolio</p>
+                                <p>PRJ_05</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
         </div>
-        <div class="card">
-          <div class="card-img">
-            <img
-              src="https://images.pexels.com/photos/2707010/pexels-photo-2707010.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-              alt="Project 1"
-            />
-          </div>
-          <div class="card-copy">
-            <p>Card Title</p>
-            <p>Card ID</p>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-img">
-            <img
-              src="https://images.pexels.com/photos/458766/pexels-photo-458766.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-              alt="Project 1"
-            />
-          </div>
-          <div class="card-copy">
-            <p>Card Title</p>
-            <p>Card ID</p>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-img">
-            <img
-              src="https://images.pexels.com/photos/30715622/pexels-photo-30715622/free-photo-of-dramatic-red-lit-staircase-with-woman-portrait.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-              alt="Project 1"
-            />
-          </div>
-          <div class="card-copy">
-            <p>Card Title</p>
-            <p>Card ID</p>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-img">
-            <img
-              src="https://images.pexels.com/photos/30150650/pexels-photo-30150650/free-photo-of-dynamic-portrait-of-woman-in-black-bodysuit-against-red-background.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-              alt="Project 1"
-            />
-          </div>
-          <div class="card-copy">
-            <p>Card Title</p>
-            <p>Card ID</p>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-img">
-            <img
-              src="https://images.pexels.com/photos/3231775/pexels-photo-3231775.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-              alt="Project 1"
-            />
-          </div>
-          <div class="card-copy">
-            <p>Card Title</p>
-            <p>Card ID</p>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-img">
-            <img
-              src="https://images.pexels.com/photos/8005066/pexels-photo-8005066.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-              alt="Project 1"
-            />
-          </div>
-          <div class="card-copy">
-            <p>Card Title</p>
-            <p>Card ID</p>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-img">
-            <img
-              src="https://images.pexels.com/photos/8746272/pexels-photo-8746272.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-              alt="Project 1"
-            />
-          </div>
-          <div class="card-copy">
-            <p>Card Title</p>
-            <p>Card ID</p>
-          </div>
-        </div>
-      </div>
-    </section>
+    </div>
 
     <div class="cyber-modal" id="hireModal">
       <div class="modal-content">
@@ -375,17 +454,14 @@
           INITIATING CONNECTION
         </div>
         <div class="modal-body">
-          <div class="redirect-options">
-            <a
-              href="mailto:hitendrasinghchoudhary987@gmail.com"
-              class="cyber-option"
-            >
+          <div class="redirect-options"></div>
+            <a href="mailto:hitendrasinghchoudhary987@gmail.com" class="cyber-option"></a>
               <span class="option-id">[01]</span> EMAIL
             </a>
-            <a href="https://linkedin.com/in/hitendraa" class="cyber-option">
+            <a href="https://linkedin.com/in/hitendraa" class="cyber-option"></a>
               <span class="option-id">[02]</span> LINKEDIN
             </a>
-            <a href="https://calendly.com/yourname" class="cyber-option">
+            <a href="https://calendly.com/yourname" class="cyber-option"></a>
               <span class="option-id">[03]</span> SCHEDULE MEETING
             </a>
           </div>
@@ -400,7 +476,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script src="background.js"></script>
     <script src="work.js"></script>
     <script src="script.js"></script>
   </body>

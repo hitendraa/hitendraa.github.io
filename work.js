@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const workSection = document.querySelector(".work");
     const cardsContainer = document.querySelector(".cards");
-    const moveDistance = window.innerWidth * 5;
+    const moveDistance = window.innerWidth * 3; // Reduced from 5 to 3
     let currentXPosition = 0;
 
     const lerp = (start, end, t) => start + (end - start) * t;
@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const drawGrid = (scrollProgress) => {
         gridCtx.fillStyle = "black";
         gridCtx.fillRect(0, 0, gridCanvas.width, gridCanvas.height);
-        gridCtx.fillStyle = "#f40c3f";
+        gridCtx.fillStyle = "#00CED1"; // Changed from #f40c3f to #00CED1
         const [dotSize, spacing] = [1, 30];
         const [rows, cols] = [
             Math.ceil(gridCanvas.height / spacing),
@@ -209,4 +209,50 @@ document.addEventListener("DOMContentLoaded", () => {
         lettersRenderer.setSize(window.innerWidth, window.innerHeight);
         updateTargetPositions(ScrollTrigger.getAll()[0]?.progress || 0);
     })
+
+    // Add this to handle card hover interactions
+    document.querySelectorAll('.card').forEach(card => {
+        // Add subtle 3D rotation effect on hover
+        card.addEventListener('mousemove', (e) => {
+            const cardRect = card.getBoundingClientRect();
+            const centerX = cardRect.left + cardRect.width / 2;
+            const centerY = cardRect.top + cardRect.height / 2;
+            const rotateY = ((e.clientX - centerX) / cardRect.width) * 5; // Max 5 degrees rotation
+            const rotateX = ((e.clientY - centerY) / cardRect.height) * -5; // Inverted for correct effect
+            
+            gsap.to(card, {
+                rotateY: rotateY,
+                rotateX: rotateX,
+                duration: 0.5,
+                ease: 'power2.out'
+            });
+            
+            // Also move the image slightly
+            const img = card.querySelector('.browser-content img');
+            gsap.to(img, {
+                x: rotateY * 2,
+                y: rotateX * -2,
+                duration: 0.5,
+                ease: 'power2.out'
+            });
+        });
+        
+        // Reset on mouse leave
+        card.addEventListener('mouseleave', () => {
+            gsap.to(card, {
+                rotateY: 0,
+                rotateX: 0,
+                duration: 0.5,
+                ease: 'power2.out'
+            });
+            
+            const img = card.querySelector('.browser-content img');
+            gsap.to(img, {
+                x: 0,
+                y: 0,
+                duration: 0.5,
+                ease: 'power2.out'
+            });
+        });
+    });
 });

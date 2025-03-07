@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
             duration: 0.5
         }, '-=0.2');
 
-    // Add hover animations for CTA buttons
+    // Add hover animations for tech tags
     gsap.utils.toArray('.tech-tag').forEach(tag => {
         tag.addEventListener('mouseenter', () => {
             gsap.to(tag, {
@@ -97,26 +97,34 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Enhanced parallax effect
-    window.addEventListener('scroll', () => {
-        const scrolled = window.pageYOffset;
-        gsap.to('.hero-content', {
-            y: scrolled * 0.1,
-            duration: 0.8,
-            ease: 'none'
+    // Disable parallax effect on hero content since background is removed
+    // Instead add a subtle hover effect when mouse moves
+    const hero = document.querySelector('.hero');
+    const heroContent = document.querySelector('.hero-content');
+    
+    if (hero && heroContent) {
+        hero.addEventListener('mousemove', (e) => {
+            const { clientX, clientY } = e;
+            const xPos = (clientX / window.innerWidth - 0.5) * 10;
+            const yPos = (clientY / window.innerHeight - 0.5) * 10;
+            
+            gsap.to(heroContent, {
+                x: xPos,
+                y: yPos,
+                duration: 1,
+                ease: 'power2.out'
+            });
         });
-        gsap.to('.hero-title .line', {
-            x: scrolled * 0.1,
-            duration: 0.8,
-            ease: 'none',
-            stagger: 0.1
+        
+        hero.addEventListener('mouseleave', () => {
+            gsap.to(heroContent, {
+                x: 0,
+                y: 0,
+                duration: 1,
+                ease: 'power2.out'
+            });
         });
-        gsap.to('.hero-decorations', {
-            y: scrolled * 0.05,
-            duration: 0.8,
-            ease: 'none'
-        });
-    });
+    }
 
     // Modal open function
     const openModal = () => {
@@ -190,40 +198,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Add theme switching functionality
-    const createThemeTransition = () => {
-        const overlay = document.createElement('div');
-        overlay.className = 'theme-transition';
-        document.body.appendChild(overlay);
-        return overlay;
-    };
-
     const themeSwitch = document.getElementById('themeSwitch');
     
-    const createHexGrid = () => {
-        const grid = document.getElementById('themeGrid');
-        grid.style.display = 'block';
-        grid.innerHTML = '';
-        
-        const hexSize = 100;
-        const w = window.innerWidth;
-        const h = window.innerHeight;
-        const cols = Math.ceil(w / hexSize) + 2;
-        const rows = Math.ceil(h / hexSize) + 2;
-        
-        for(let y = 0; y < rows; y++) {
-            for(let x = 0; x < cols; x++) {
-                const hex = document.createElement('div');
-                hex.className = 'hex-container';
-                hex.style.width = `${hexSize}px`;
-                hex.style.height = `${hexSize}px`;
-                hex.style.left = `${(x * hexSize * 0.75) - hexSize}px`;
-                hex.style.top = `${(y * hexSize * 0.87) - hexSize}px`;
-                grid.appendChild(hex);
-            }
-        }
-        return grid;
-    };
-
     const createTransitionElements = () => {
         const grid = document.getElementById('themeGrid');
         grid.style.display = 'block';
@@ -290,14 +266,6 @@ document.addEventListener('DOMContentLoaded', () => {
             opacity: 0,
             duration: 0.2
         }, '-=0.2');
-
-        // Subtle particle effect
-        gsap.to('#bgCanvas', {
-            opacity: 0.7,
-            duration: 0.3,
-            yoyo: true,
-            repeat: 1
-        });
     };
 
     themeSwitch.addEventListener('click', toggleTheme);
