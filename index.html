@@ -1,482 +1,567 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark" data-theme-changing="false">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Updated security headers -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="Content-Security-Policy" content="
-      default-src 'self' cdnjs.cloudflare.com unpkg.com;
-      style-src 'self' 'unsafe-inline' fonts.googleapis.com cdnjs.cloudflare.com;
-      font-src 'self' fonts.gstatic.com cdnjs.cloudflare.com *.cloudflare.com;
-      img-src 'self' images.pexels.com *.hitendraa.me;
-      script-src 'self' 'unsafe-inline' cdnjs.cloudflare.com unpkg.com;
-      connect-src 'self';
-      frame-src 'none';">
-    <meta name="theme-color" content="#F40C3F">
-    
-    <title>
-      Hitendra Singh Choudhary | AI/ML Developer & Full Stack Engineer
-    </title>
-
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://hitendraa.me" />
-
-    <!-- Enhanced SEO Meta Tags -->
-    <meta
-      name="description"
-      content="Expert AI/ML Developer and Full Stack Engineer with expertise in Python, TensorFlow, React.js, Node.js, and Cloud technologies. Creating innovative solutions for real-world problems through cutting-edge technology."
-    />
-    <meta
-      name="keywords"
-      content="Hitendra Singh Choudhary, AI/ML Engineer, Machine Learning, Deep Learning, Full Stack Developer, Python, TensorFlow, React.js, Node.js, Flutter, Cloud Computing, Web Development, Software Engineering"
-    />
-    <meta name="author" content="Hitendra Singh Choudhary" />
-    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-
-    <!-- Enhanced Open Graph Tags -->
-    <meta property="og:site_name" content="Hitendra Singh Choudhary Portfolio" />
-    <meta property="og:locale" content="en_US" />
-    <meta property="og:type" content="website" />
-    <meta
-      property="og:title"
-      content="Hitendra Singh Choudhary | AI/ML Developer & Full Stack Engineer"
-    />
-    <meta
-      property="og:description"
-      content="Expert AI/ML Developer and Full Stack Engineer specializing in creating innovative digital solutions using Python, TensorFlow, React.js, and Cloud technologies."
-    />
-    <meta
-      property="og:image"
-      content="https://hitendraa.me/images/profile.jpg"
-    />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta property="og:url" content="https://hitendraa.me" />
-
-    <!-- Schema.org structured data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Hitendra Singh Choudhary",
-      "url": "https://hitendraa.me",
-      "image": "https://hitendraa.me/images/profile.jpg",
-      "sameAs": [
-        "https://github.com/hitendraa",
-        "https://linkedin.com/in/hitendraa"
-      ],
-      "jobTitle": "AI/ML Developer & Full Stack Engineer",
-      "worksFor": {
-        "@type": "Organization",
-        "name": "Self-Employed"
-      },
-      "description": "Expert AI/ML Developer and Full Stack Engineer specializing in creating innovative digital solutions."
-    }
-    </script>
-
-    <!-- Favicon Links -->
-    <link
-      rel="icon"
-      type="image/png"
-      href="/images/favicon-96x96.png"
-      sizes="96x96"
-    />
-    <link rel="icon" type="image/svg+xml" href="/images/favicon.svg" />
-    <link rel="shortcut icon" href="/images/favicon.ico" />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="/images/apple-touch-icon.png"
-    />
-    <meta name="apple-mobile-web-app-title" content="Hitendra" />
-    <link rel="manifest" href="/images/site.webmanifest" />
-
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-    />
-    <!-- Add Google Fonts preconnect -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
-    <style>
-      .letter {
-        color: #00CED1; /* Updated from #F40C3F to #00CED1 */
-      }
-    </style>
-  </head>
-  <body>
-    <nav class="cyber-nav">
-      <div class="logo">
-        <a href="/"><span class="glitch">HITENDRA</span></a>
-        <div class="status-line">
-          <span class="status-dot"></span>
-          <span class="status-text">SYSTEM ONLINE</span>
-        </div>
-      </div>
-
-      <!-- Desktop Navigation -->
-      <div class="nav-links desktop-only">
-        <div class="nav-decorator">&#60;&#47;&#62;</div>
-        <a href="#" class="cyber-link"
-          >HOME<span class="link-decorator">_01</span></a
-        >
-        <a href="#work" class="cyber-link"
-          >WORK<span class="link-decorator">_02</span></a
-        >
-        <a href="#" class="cyber-link"
-          >SKILLS<span class="link-decorator">_03</span></a
-        >
-        <a href="#" class="cyber-link"
-          >CONTACT<span class="link-decorator">_04</span></a
-        >
-        <div class="nav-decorator">&#60;&#47;&#62;</div>
-      </div>
-
-      <div class="social-hire desktop-only">
-        <div class="social-links">
-          <a href="https://github.com/hitendraa" class="social-icon"
-            ><i class="fab fa-github"></i
-          ></a>
-          <a href="https://linkedin.com/in/hitendraa" class="social-icon"
-            ><i class="fab fa-linkedin"></i
-          ></a>
-          <button class="theme-switch" id="themeSwitch">
-            <span class="switch-text" data-text="SWITCH.SYS">SWITCH.SYS</span>
-          </button>
-        </div>
-        <div class="hire-section">
-          <span class="hire-text">AVAILABLE FOR HIRE</span>
-          <div class="qr-code">
-            <span class="scan-text">SCAN</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Mobile Controls -->
-      <div class="mobile-controls">
-        <button class="theme-switch" id="mobilethemeSwitch">
-          <span class="switch-text" data-text="SWITCH.SYS">SWITCH.SYS</span>
-        </button>
-        <button class="hamburger-menu" id="hamburgerMenu">
-          <i class="fas fa-bars"></i>
-        </button>
-      </div>
-    </nav>
-
-    <!-- Mobile Navigation -->
-    <div class="mobile-nav">
-      <button class="mobile-close" id="mobileClose">
-        <i class="fas fa-times"></i>
-      </button>
-      <div class="nav-links">
-        <div class="nav-decorator">&#60;&#47;&#62;</div>
-        <a href="#" class="cyber-link"
-          >HOME<span class="link-decorator">_01</span></a
-        >
-        <a href="#work" class="cyber-link"
-          >WORK<span class="link-decorator">_02</span></a
-        >
-        <a href="#" class="cyber-link"
-          >SKILLS<span class="link-decorator">_03</span></a
-        >
-        <a href="#" class="cyber-link"
-          >CONTACT<span class="link-decorator">_04</span></a
-        >
-        <div class="nav-decorator">&#60;&#47;&#62;</div>
-      </div>
-      <div class="social-hire">
-        <div class="social-links">
-          <a href="https://github.com/hitendraa" class="social-icon"
-            ><i class="fab fa-github"></i
-          ></a>
-          <a href="https://linkedin.com/in/hitendraa" class="social-icon"
-            ><i class="fab fa-linkedin"></i
-          ></a>
-          <button class="theme-switch" id="themeSwitch">
-            <span class="switch-text" data-text="SWITCH.SYS">SWITCH.SYS</span>
-          </button>
-        </div>
-        <div class="hire-section">
-          <span class="hire-text">AVAILABLE FOR HIRE</span>
-          <div class="qr-code">
-            <span class="scan-text">SCAN</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="overlay" id="overlay"></div>
-
-    <section class="hero" id="hero">
-      <div class="hero-decorations">
-        <div class="hero-line hero-line-left"></div>
-        <div class="hero-line hero-line-right"></div>
-        <div class="hero-line hero-line-middle"></div>
-        <div class="hero-stats hero-stats-1">
-          STATUS: ACTIVE<br />
-          CORE: AI/ML<br />
-          BUILD: V3.0<br />
-          YEAR: FINAL
-        </div>
-        <div class="hero-stats hero-stats-2">
-          STACK: FULLSTACK<br />
-          FOCUS: WEB + APP<br />
-          CREATIVE: ENABLED<br />
-          MODE: LEARNING
-        </div>
-      </div>
-
-      <div class="hero-content">
-        <div class="hero-meta">
-          <span>SYSTEM.INIT</span>
-          <div class="meta-divider"></div>
-          <span>CSE.AIML</span>
-        </div>
-
-        <h1 class="hero-title">
-          <span class="line">HITENDRA</span>
-          <span class="line">SINGH</span>
-          <span class="line line-highlight">CHOUDHARY</span>
-        </h1>
-
-        <div class="hero-subtitle">
-          Creating digital experiences through code and creativity. Specializing
-          in AI/ML integration with modern web technologies.
-        </div>
-
-        <div class="hero-tech">
-          <span class="tech-tag">Python/ML</span>
-          <span class="tech-tag">React.js</span>
-          <span class="tech-tag">Node.js</span>
-          <span class="tech-tag">Flutter</span>
-          <span class="tech-tag">Creative Dev</span>
-          <span class="tech-tag">Full Stack</span>
-        </div>
-
-        <div class="hero-cta">
-          <button class="cta-primary">VIEW PROJECTS</button>
-          <a href="#contact" class="cta-secondary">
-            CONNECT <span>&rarr;</span>
-          </a>
-        </div>
-
-        <div class="scroll-indicator">
-          <span>SCROLL</span>
-          <div class="scroll-line"></div>
-        </div>
-      </div>
-    </section>
-    <div class="work-container">
-        <div class="work-window">
-            <div class="window-header"></div>
-            <div class="window-controls">
-                <div class="window-control"></div>
-                <div class="window-control"></div>
-                <div class="window-control"></div>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- GSAP Core -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+    <!-- GSAP CustomEase Plugin -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/CustomEase.min.js"></script>
+    <!-- GSAP ScrollTrigger Plugin -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
+    <!-- GSAP ScrollTo Plugin -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollToPlugin.min.js"></script>
+</head>
+<body>
+    <div class="all-content" id="all-content">
+        <nav class="navigation" id="navigation">
+            <div class="navigation__container">
+                <div class="navigation__logo">Portfolio</div>
+                <div class="navigation__center">
+                    <button class="menu-btn" id="menu-btn">
+                        <span class="menu-btn__line"></span>
+                        <span class="menu-btn__line"></span>
+                        <span class="menu-btn__line"></span>
+                    </button>
+                </div>
+                <div class="navigation__right">
+                    <a href="#contact" class="contact-link">Contact</a>
+                </div>
             </div>
-            <div class="work-preview">
-                <section class="work" id="work">
-                    <div class="text-container"></div>
-                    <div class="cards">
-                        <div class="card" data-project="chat-pdf">
-                            <div class="card-img">
-                                <div class="browser-frame">
-                                    <div class="browser-header">
-                                        <div class="browser-controls">
-                                            <span></span>
-                                            <span></span>
-                                            <span></span>
-                                        </div>
-                                        <div class="browser-address">
-                                            <div class="browser-url">chat-with-pdf.project</div>
-                                        </div>
-                                    </div>
-                                    <div class="browser-content">
-                                        <img src="images/chat-with-pdf.png" alt="Chat with PDF Application" />
-                                    </div>
+        </nav>
+
+        <div class="content" id="content">
+            <!-- Hero Section -->
+            <section class="hero" id="hero">
+                <div class="hero__container">
+                    <div class="hero__content">
+                        <div class="hero__text">
+                            <h1 class="hero__title">
+                                <span class="hero__title-line">Hitendra Singh</span>
+                                <span class="hero__title-line">Choudhary</span>
+                            </h1>
+                            <p class="hero__subtitle">AI/ML Engineer & Full-Stack Developer</p>
+                            <div class="hero__description">
+                                <p>Computer Science Engineering student with hands-on experience in AI, full-stack, and backend development. Currently working at DRDO on cutting-edge neural networks and GaN technology.</p>
+                            </div>
+                            <div class="hero__cta">
+                                <button class="btn btn--primary" onclick="scrollToProjects()">View My Work</button>
+                                <button class="btn btn--secondary" onclick="downloadResume()">Download Resume</button>
+                            </div>
+                        </div>
+                       
+                    </div>
+                    <div class="hero__scroll-indicator">
+                        <div class="scroll-line"></div>
+                        <span class="scroll-text">Scroll to explore</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projects Section -->
+            <section class="projects" id="projects">
+                <div class="projects__container">
+                    <div class="projects__header">
+                        <h2 class="projects__title">
+                            <span class="projects__title-line">Featured</span>
+                            <span class="projects__title-line">Projects</span>
+                        </h2>
+                        <p class="projects__subtitle">Showcasing my expertise in AI/ML, full-stack development, and modern web technologies</p>
+                    </div>
+                    
+                    <div class="projects__grid">
+                        <!-- Project 1: Sonica (Currently Working) -->
+                        <div class="project-card" data-project="sonica">
+                            <div class="project-card__header">
+                                <div class="project-card__meta">
+                                    <span class="project-card__status">Currently Working</span>
+                                    <span class="project-card__date">May 2025 - Present</span>
                                 </div>
-                                <div class="card-overlay">
-                                    <div class="card-info">
-                                        <span class="card-tag">AI/ML</span>
-                                    </div>
-                                    <div class="card-actions">
-                                        <a href="https://chat-with-pdf-challenge-mocha.vercel.app/" target="_blank" class="card-button">VISIT SITE</a>
-                                    </div>
+                                <h3 class="project-card__title">Sonica</h3>
+                                <p class="project-card__subtitle">Music Streaming Platform</p>
+                            </div>
+                            <div class="project-card__content">
+                                <p class="project-card__description">
+                                    Full-stack music streaming platform with real-time playback, personalized recommendations, and responsive UI using Next.js. Building cross-platform mobile apps with React Native.
+                                </p>
+                                <div class="project-card__tech">
+                                    <span class="tech-tag">Next.js</span>
+                                    <span class="tech-tag">React Native</span>
+                                    <span class="tech-tag">Node.js</span>
+                                    <span class="tech-tag">MongoDB</span>
                                 </div>
                             </div>
-                            <div class="card-copy">
-                                <p>Chat with PDF</p>
-                                <p>PRJ_01</p>
+                            <div class="project-card__footer">
+                                <button class="project-btn project-btn--primary">View Details</button>
+                                <button class="project-btn project-btn--secondary">Live Demo</button>
                             </div>
                         </div>
 
-                        <div class="card" data-project="kynok">
-                            <div class="card-img">
-                                <div class="browser-frame">
-                                    <div class="browser-header">
-                                        <div class="browser-controls">
-                                            <span></span>
-                                            <span></span>
-                                            <span></span>
-                                        </div>
-                                        <div class="browser-address">
-                                            <div class="browser-url">kynok.com</div>
-                                        </div>
-                                    </div>
-                                    <div class="browser-content">
-                                        <img src="images/kynok.png" alt="Kynok Startup Website" />
-                                    </div>
+                        <!-- Project 2: Expert India Legal Consultancy -->
+                        <div class="project-card" data-project="expert-india">
+                            <div class="project-card__header">
+                                <div class="project-card__meta">
+                                    <span class="project-card__status">Completed</span>
+                                    <span class="project-card__date">Jun 12 - Jul 3, 2025</span>
                                 </div>
-                                <div class="card-overlay">
-                                    <div class="card-info">
-                                        <span class="card-tag">STARTUP</span>
-                                    </div>
-                                    <div class="card-actions">
-                                        <a href="https://kynok.com" class="card-button" target="_blank">VISIT SITE</a>
-                                    </div>
+                                <h3 class="project-card__title">Expert India</h3>
+                                <p class="project-card__subtitle">Legal Consultancy Platform</p>
+                            </div>
+                            <div class="project-card__content">
+                                <p class="project-card__description">
+                                    Full-stack legal consultancy platform with comprehensive user management, payment integrations, and custom client functionalities. Built with modern Next.js architecture for optimal performance.
+                                </p>
+                                <div class="project-card__tech">
+                                    <span class="tech-tag">Next.js</span>
+                                    <span class="tech-tag">Payment Gateway</span>
+                                    <span class="tech-tag">User Management</span>
+                                    <span class="tech-tag">PostgreSQL</span>
                                 </div>
                             </div>
-                            <div class="card-copy">
-                                <p>Kynok Startup</p>
-                                <p>PRJ_02</p>
+                            <div class="project-card__footer">
+                                <button class="project-btn project-btn--primary">View Details</button>
+                                <button class="project-btn project-btn--secondary">Live Site</button>
                             </div>
                         </div>
 
-                        <div class="card" data-project="soothup">
-                            <div class="card-img">
-                                <div class="browser-frame">
-                                    <div class="browser-header">
-                                        <div class="browser-controls">
-                                            <span></span>
-                                            <span></span>
-                                            <span></span>
-                                        </div>
-                                        <div class="browser-address">
-                                            <div class="browser-url">soothup.project</div>
-                                        </div>
-                                    </div>
-                                    <div class="browser-content">
-                                        <img src="images/soothup.png" alt="SoothUp Application" />
-                                    </div>
+                        <!-- Project 3: Habit Tracker -->
+                        <div class="project-card" data-project="habit-tracker">
+                            <div class="project-card__header">
+                                <div class="project-card__meta">
+                                    <span class="project-card__status">Completed</span>
+                                    <span class="project-card__date">May 2025</span>
                                 </div>
-                                <div class="card-overlay">
-                                    <div class="card-info">
-                                        <span class="card-tag">WELLNESS</span>
-                                    </div>
-                                    <div class="card-actions">
-                                        <a href="https://www.figma.com/design/nCcWKP2wnRR4iNu1TRcqNV/Wellness-%26-Fitness-App-UI?node-id=0-1&p=f&t=kudYoKLhbwUKAyRT-0" class="card-button" target="_blank">VISIT SITE</a>
-                                    </div>
+                                <h3 class="project-card__title">Habit Tracker</h3>
+                                <p class="project-card__subtitle">Productivity Application</p>
+                            </div>
+                            <div class="project-card__content">
+                                <p class="project-card__description">
+                                    Habit-tracking app with 95% user satisfaction, featuring intuitive UI, animated progress charts, and gamified achievements. Improved daily retention by 40%.
+                                </p>
+                                <div class="project-card__tech">
+                                    <span class="tech-tag">React</span>
+                                    <span class="tech-tag">GSAP</span>
+                                    <span class="tech-tag">PostgreSQL</span>
+                                    <span class="tech-tag">Express.js</span>
                                 </div>
                             </div>
-                            <div class="card-copy">
-                                <p>SoothUp</p>
-                                <p>PRJ_03</p>
+                            <div class="project-card__footer">
+                                <button class="project-btn project-btn--primary">View Details</button>
+                                <button class="project-btn project-btn--secondary">GitHub</button>
                             </div>
                         </div>
 
-                        <div class="card" data-project="apple">
-                            <div class="card-img">
-                                <div class="browser-frame">
-                                    <div class="browser-header">
-                                        <div class="browser-controls">
-                                            <span></span>
-                                            <span></span>
-                                            <span></span>
-                                        </div>
-                                        <div class="browser-address">
-                                            <div class="browser-url">apple-clone.project</div>
-                                        </div>
-                                    </div>
-                                    <div class="browser-content">
-                                        <img src="images/apple-clone.png" alt="Apple Clone 3D Website" />
-                                    </div>
+                        <!-- Project 4: Kynok E-commerce -->
+                        <div class="project-card" data-project="kynok">
+                            <div class="project-card__header">
+                                <div class="project-card__meta">
+                                    <span class="project-card__status">Completed</span>
+                                    <span class="project-card__date">Dec 2024 - Jan 2025</span>
                                 </div>
-                                <div class="card-overlay">
-                                    <div class="card-info">
-                                        <span class="card-tag">3D/WEB</span>
-                                    </div>
-                                    <div class="card-actions">
-                                        <a href="https://apple-website-liard.vercel.app/" target="_blank" class="card-button">VISIT SITE</a>
-                                    </div>
+                                <h3 class="project-card__title">Kynok Startup Site</h3>
+                                <p class="project-card__subtitle">E-commerce Platform</p>
+                            </div>
+                            <div class="project-card__content">
+                                <p class="project-card__description">
+                                    Fully animated e-commerce website using MERN stack, GSAP, and Framer Motion. Custom payment gateway and tailored client functionality for enhanced engagement.
+                                </p>
+                                <div class="project-card__tech">
+                                    <span class="tech-tag">MERN Stack</span>
+                                    <span class="tech-tag">GSAP</span>
+                                    <span class="tech-tag">Framer Motion</span>
+                                    <span class="tech-tag">Payment Gateway</span>
                                 </div>
                             </div>
-                            <div class="card-copy">
-                                <p>Apple Clone 3D</p>
-                                <p>PRJ_04</p>
+                            <div class="project-card__footer">
+                                <button class="project-btn project-btn--primary">View Details</button>
+                                <button class="project-btn project-btn--secondary">Live Site</button>
                             </div>
                         </div>
 
-                        <div class="card" data-project="portfolio">
-                            <div class="card-img">
-                                <div class="browser-frame">
-                                    <div class="browser-header">
-                                        <div class="browser-controls">
-                                            <span></span>
-                                            <span></span>
-                                            <span></span>
-                                        </div>
-                                        <div class="browser-address">
-                                            <div class="browser-url">hitendraa.me</div>
-                                        </div>
-                                    </div>
-                                    <div class="browser-content">
-                                        <img src="images/portfolio.png" alt="Portfolio Site" />
-                                    </div>
+                        <!-- Project 5: Chat With PDF -->
+                        <div class="project-card" data-project="chat-pdf">
+                            <div class="project-card__header">
+                                <div class="project-card__meta">
+                                    <span class="project-card__status">Completed</span>
+                                    <span class="project-card__date">2024</span>
                                 </div>
-                                <div class="card-overlay">
-                                    <div class="card-info">
-                                        <span class="card-tag">PORTFOLIO</span>
-                                    </div>
-                                    <div class="card-actions">
-                                        <a href="/" class="card-button">CURRENT SITE</a>
-                                    </div>
+                                <h3 class="project-card__title">Chat With PDF</h3>
+                                <p class="project-card__subtitle">AI-Powered Document Assistant</p>
+                            </div>
+                            <div class="project-card__content">
+                                <p class="project-card__description">
+                                    AI platform for interactive PDF conversations using LangChain and Generative AI. Features tiered subscriptions with usage limits and vector database integration.
+                                </p>
+                                <div class="project-card__tech">
+                                    <span class="tech-tag">LangChain</span>
+                                    <span class="tech-tag">Generative AI</span>
+                                    <span class="tech-tag">Vector DB</span>
+                                    <span class="tech-tag">Python</span>
                                 </div>
                             </div>
-                            <div class="card-copy">
-                                <p>Portfolio</p>
-                                <p>PRJ_05</p>
+                            <div class="project-card__footer">
+                                <button class="project-btn project-btn--primary">View Details</button>
+                                <button class="project-btn project-btn--secondary">Try Demo</button>
+                            </div>
+                        </div>
+
+                        <!-- Project 6: Apple Website -->
+                        <div class="project-card" data-project="apple-website">
+                            <div class="project-card__header">
+                                <div class="project-card__meta">
+                                    <span class="project-card__status">Completed</span>
+                                    <span class="project-card__date">2024</span>
+                                </div>
+                                <h3 class="project-card__title">Apple Website</h3>
+                                <p class="project-card__subtitle">3D Interactive Experience</p>
+                            </div>
+                            <div class="project-card__content">
+                                <p class="project-card__description">
+                                    Interactive iPhone product page replica with 3D models, smooth animations, and Apple-style UI components including carousels and seamless transitions.
+                                </p>
+                                <div class="project-card__tech">
+                                    <span class="tech-tag">React.js</span>
+                                    <span class="tech-tag">Three.js</span>
+                                    <span class="tech-tag">GSAP</span>
+                                    <span class="tech-tag">3D Modeling</span>
+                                </div>
+                            </div>
+                            <div class="project-card__footer">
+                                <button class="project-btn project-btn--primary">View Details</button>
+                                <button class="project-btn project-btn--secondary">Live Demo</button>
                             </div>
                         </div>
                     </div>
-                </section>
+                </div>
+            </section>
+
+            <!-- Experience Section -->
+            <section class="experience" id="experience">
+                <div class="experience__container">
+                    <div class="experience__header">
+                        <h2 class="experience__title">
+                            <span class="experience__title-line">Work</span>
+                            <span class="experience__title-line">Experience</span>
+                        </h2>
+                        <p class="experience__subtitle">Professional journey in AI/ML research and full-stack development</p>
+                    </div>
+                    <div class="experience__timeline">
+                        <!-- Experience 1: DRDO (Current) -->
+                        <div class="experience-item" data-experience="drdo">
+                            <div class="experience-item__indicator">
+                                <div class="experience-item__dot"></div>
+                                <div class="experience-item__line"></div>
+                            </div>
+                            <div class="experience-item__content">
+                                <div class="experience-item__header">
+                                    <div class="experience-item__meta">
+                                        <span class="experience-item__status experience-item__status--current">Current Position</span>
+                                        <span class="experience-item__duration">May 2025 - Present</span>
+                                    </div>
+                                    <h3 class="experience-item__company">DRDO</h3>
+                                    <p class="experience-item__role">Research Intern</p>
+                                </div>
+                                <div class="experience-item__description">
+                                    <p>Currently working on cutting-edge projects involving Python, GaN technology, and neural networks. Leveraging TensorFlow and Keras to develop and deploy advanced AI models for defense research applications.</p>
+                                </div>
+                                <div class="experience-item__tech">
+                                    <span class="tech-tag">Python</span>
+                                    <span class="tech-tag">TensorFlow</span>
+                                    <span class="tech-tag">Keras</span>
+                                    <span class="tech-tag">Neural Networks</span>
+                                    <span class="tech-tag">GaN Technology</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Experience 2: MaxGen Technologies -->
+                        <div class="experience-item" data-experience="maxgen">
+                            <div class="experience-item__indicator">
+                                <div class="experience-item__dot"></div>
+                                <div class="experience-item__line"></div>
+                            </div>
+                            <div class="experience-item__content">
+                                <div class="experience-item__header">
+                                    <div class="experience-item__meta">
+                                        <span class="experience-item__status">Completed</span>
+                                        <span class="experience-item__duration">May 2024 - Jul 2024</span>
+                                    </div>
+                                    <h3 class="experience-item__company">MaxGen Technologies</h3>
+                                    <p class="experience-item__role">Software Development Intern</p>
+                                </div>
+                                <div class="experience-item__description">
+                                    <p>Developed a comprehensive Android E-commerce Admin Panel using Core Java to handle product, order, and user management. Enhanced backend operations and significantly improved system performance and efficiency.</p>
+                                </div>
+                                <div class="experience-item__tech">
+                                    <span class="tech-tag">Core Java</span>
+                                    <span class="tech-tag">Android Development</span>
+                                    <span class="tech-tag">E-commerce</span>
+                                    <span class="tech-tag">Backend Systems</span>
+                                    <span class="tech-tag">Database Management</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Skills Section -->
+            <section class="skills" id="skills">
+                <div class="skills__container">
+                    <div class="skills__header">
+                        <h2 class="skills__title">
+                            <span class="skills__title-line">Technical</span>
+                            <span class="skills__title-line">Skills</span>
+                        </h2>
+                        <p class="skills__subtitle">Expertise across the full technology stack</p>
+                    </div>
+                    <div class="skills__content">
+                        <div class="skills__pyramid">
+                            <!-- Top Row - Core Languages & Frameworks -->
+                            <div class="skills__row skills__row--top">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Java</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">React.js</span>
+                                <span class="tech-tag">Next.js</span>
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">TensorFlow</span>
+                                <span class="tech-tag">Android</span>
+                            </div>
+
+                            <!-- Second Row - Advanced Technologies -->
+                            <div class="skills__row skills__row--middle">
+                                <span class="tech-tag">TypeScript</span>
+                                <span class="tech-tag">Kotlin</span>
+                                <span class="tech-tag">React Native</span>
+                                <span class="tech-tag">Keras</span>
+                                <span class="tech-tag">Neural Networks</span>
+                                <span class="tech-tag">Express.js</span>
+                                <span class="tech-tag">MongoDB</span>
+                            </div>
+
+                            <!-- Third Row - Web & AI Tools -->
+                            <div class="skills__row skills__row--middle">
+                                <span class="tech-tag">Scikit-learn</span>
+                                <span class="tech-tag">Pandas</span>
+                                <span class="tech-tag">NumPy</span>
+                                <span class="tech-tag">GaN</span>
+                                <span class="tech-tag">PostgreSQL</span>
+                                <span class="tech-tag">GSAP</span>
+                            </div>
+
+                            <!-- Fourth Row - Development Tools -->
+                            <div class="skills__row skills__row--middle">
+                                <span class="tech-tag">Firebase</span>
+                                <span class="tech-tag">REST APIs</span>
+                                <span class="tech-tag">Jetpack Compose</span>
+                                <span class="tech-tag">Three.js</span>
+                                <span class="tech-tag">Tailwind</span>
+                            </div>
+
+                            <!-- Fifth Row - Backend & Auth -->
+                            <div class="skills__row skills__row--bottom">
+                                <span class="tech-tag">JWT</span>
+                                <span class="tech-tag">OAuth2</span>
+                                <span class="tech-tag">Prisma</span>
+                                <span class="tech-tag">Supabase</span>
+                            </div>
+
+                            <!-- Sixth Row - Cloud & Tools -->
+                            <div class="skills__row skills__row--bottom">
+                                <span class="tech-tag">AWS</span>
+                                <span class="tech-tag">Docker</span>
+                                <span class="tech-tag">Figma</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section class="contact" id="contact">
+                <div class="contact__container">
+                    <div class="contact__header">
+                        <h2 class="contact__title">
+                            <span class="contact__title-line">Let's Work</span>
+                            <span class="contact__title-line">Together</span>
+                        </h2>
+                        <p class="contact__subtitle">Ready to bring your ideas to life with cutting-edge technology</p>
+                    </div>
+                    
+                    <div class="contact__content">
+                        <div class="contact__info">
+                            <div class="contact__text">
+                                <p class="contact__description">
+                                    I'm always excited to collaborate on innovative projects that push the boundaries of AI/ML and full-stack development. Whether you have a complex technical challenge or an ambitious idea, let's discuss how we can make it happen.
+                                </p>
+                                
+                                <div class="contact__methods">
+                                    <div class="contact__method">
+                                        <div class="contact__method-icon">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                                <polyline points="22,6 12,13 2,6"></polyline>
+                                            </svg>
+                                        </div>
+                                        <div class="contact__method-content">
+                                            <span class="contact__method-label">Email</span>
+                                            <a href="mailto:hitendrasinghchoudhary987@gmail.com" class="contact__method-value">hitendrasinghchoudhary987@gmail.com</a>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="contact__method">
+                                        <div class="contact__method-icon">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                                                <rect x="2" y="9" width="4" height="12"></rect>
+                                                <circle cx="4" cy="4" r="2"></circle>
+                                            </svg>
+                                        </div>
+                                        <div class="contact__method-content">
+                                            <span class="contact__method-label">LinkedIn</span>
+                                            <a href="https://www.linkedin.com/in/hitendraa/" target="_blank" class="contact__method-value">linkedin.com/in/hitendraa</a>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="contact__method">
+                                        <div class="contact__method-icon">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                                            </svg>
+                                        </div>
+                                        <div class="contact__method-content">
+                                            <span class="contact__method-label">GitHub</span>
+                                            <a href="https://github.com/hitendraa" target="_blank" class="contact__method-value">github.com/hitendraa</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="contact__specialties">
+                                    <h3 class="contact__specialties-title">What I Can Help With</h3>
+                                    <div class="contact__specialties-list">
+                                        <span class="tech-tag">AI/ML Solutions</span>
+                                        <span class="tech-tag">Full-Stack Development</span>
+                                        <span class="tech-tag">Neural Networks</span>
+                                        <span class="tech-tag">React/Next.js Apps</span>
+                                        <span class="tech-tag">Mobile Development</span>
+                                        <span class="tech-tag">Research Projects</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="contact__form">
+                            <div class="contact__form-notice">
+                                <div class="contact__form-notice-content">
+                                    <h3>Get in Touch</h3>
+                                    <p>I'd love to hear about your project! For the fastest response, please reach out via:</p>
+                                    <div class="contact__form-notice-links">
+                                        <a href="mailto:hitendrasinghchoudhary987@gmail.com" class="contact__notice-link">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                                <polyline points="22,6 12,13 2,6"></polyline>
+                                            </svg>
+                                            <span>Send Email</span>
+                                        </a>
+                                        <a href="https://www.linkedin.com/in/hitendraa/" target="_blank" class="contact__notice-link">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                                                <rect x="2" y="9" width="4" height="12"></rect>
+                                                <circle cx="4" cy="4" r="2"></circle>
+                                            </svg>
+                                            <span>LinkedIn Message</span>
+                                        </a>
+                                    </div>
+                                    <p class="contact__form-notice-note">
+                                        <small>Contact form coming soon - currently setting up email delivery!</small>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact__footer">
+                        <div class="contact__footer-content">
+                            <p class="contact__footer-text">
+                                Currently based in India • Available for remote work worldwide
+                            </p>
+                            <div class="contact__footer-links">
+                                <a href="#" class="contact__footer-link">Privacy Policy</a>
+                                <span class="contact__footer-divider">•</span>
+                                <a href="#" class="contact__footer-link">Terms of Service</a>
+                            </div>
+                        </div>
+                        <div class="contact__footer-copyright">
+                            <p>&copy; 2025 Hitendra Singh Choudhary. All rights reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Project Details Popup -->
+    <div class="project-popup" id="project-popup">
+        <div class="project-popup__overlay"></div>
+        <div class="project-popup__container">
+            <div class="project-popup__header">
+                <button class="project-popup__close" id="popup-close">
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+            <div class="project-popup__content">
+                <div class="project-popup__info">
+                    <div class="project-popup__meta">
+                        <span class="project-popup__status" id="popup-status">Status</span>
+                        <span class="project-popup__date" id="popup-date">Date</span>
+                    </div>
+                    <h2 class="project-popup__title" id="popup-title">Project Title</h2>
+                    <p class="project-popup__subtitle" id="popup-subtitle">Project Subtitle</p>
+                    <div class="project-popup__description" id="popup-description">
+                        <p>Project description will appear here...</p>
+                    </div>
+                    <div class="project-popup__tech" id="popup-tech">
+                        <!-- Tech tags will be inserted here -->
+                    </div>
+                    <div class="project-popup__actions">
+                        <a href="#" class="project-popup__btn project-popup__btn--primary" id="popup-live-demo" target="_blank">
+                            <span>Live Demo</span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                <polyline points="15,3 21,3 21,9"></polyline>
+                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                            </svg>
+                        </a>
+                        <button class="project-popup__btn project-popup__btn--secondary" onclick="closeProjectPopup()">
+                            Close
+                        </button>
+                    </div>
+                </div>
+                <div class="project-popup__visual">
+                    <div class="project-popup__image-placeholder">
+                        <div class="project-popup__preview" id="popup-preview">
+                            <span id="popup-preview-text">Project Preview</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
-    <div class="cyber-modal" id="hireModal">
-      <div class="modal-content">
-        <button class="modal-close" id="modalClose">[ CLOSE ]</button>
-        <div class="modal-header">
-          <span class="status-dot"></span>
-          INITIATING CONNECTION
+    <div class="dropdown" id="dropdown">
+        <div class="dropdown__content">
+            <div class="dropdown__menu">
+                <a href="#hero" class="dropdown__button">HOME</a>
+                <a href="#projects" class="dropdown__button">PROJECTS</a>
+                <a href="#experience" class="dropdown__button">EXPERIENCE</a>
+                <a href="#skills" class="dropdown__button">SKILLS</a>
+                <a href="#contact" class="dropdown__button">CONTACT</a>
+            </div>
         </div>
-        <div class="modal-body">
-          <div class="redirect-options"></div>
-            <a href="mailto:hitendrasinghchoudhary987@gmail.com" class="cyber-option"></a>
-              <span class="option-id">[01]</span> EMAIL
-            </a>
-            <a href="https://linkedin.com/in/hitendraa" class="cyber-option"></a>
-              <span class="option-id">[02]</span> LINKEDIN
-            </a>
-            <a href="https://calendly.com/yourname" class="cyber-option"></a>
-              <span class="option-id">[03]</span> SCHEDULE MEETING
-            </a>
-          </div>
-          <div class="modal-status">SELECT CONTACT PROTOCOL</div>
-        </div>
-      </div>
     </div>
-
-    <div class="theme-grid" id="themeGrid"></div>
-
-    <script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script src="work.js"></script>
     <script src="script.js"></script>
-  </body>
+</body>
 </html>
